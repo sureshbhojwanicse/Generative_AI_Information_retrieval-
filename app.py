@@ -1,18 +1,3 @@
-# Document extractor using llamaindex
-A simple Streamlit web app for using [LlamaIndex](https://github.com/jerryjliu/llama_index), an interface to connect LLM’s with external data.
-
-![demo](demo/demo.gif)
-
-### Installing the dependencies
-
-```
-pip install streamlit==1.24.0
-pip install llama-index==0.5.27
-```
-
-### Source code
-
-```py
 import os, streamlit as st
 
 from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader, LLMPredictor, PromptHelper, ServiceContext
@@ -74,11 +59,3 @@ if st.button("Submit"):
                 st.error(f"Enter a valid openai key")
         except Exception as e:
             st.error(f"An error occurred: {e}")
-
-```
-
-### Run the code
-
-```
-streamlit run app.py
-```
